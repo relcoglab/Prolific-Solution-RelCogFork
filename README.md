@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/explomind1/AOI_ProlificSurveyAlgoMoralLearning1/main/d_TJeFaR7L.svg" alt="Prolific Survey Distribution Diagram">
+  <img src="https://raw.githubusercontent.com/explomind1/Prolific-Survey-Distribution-Solution/main/d_TJeFaR7L.svg" >
 </p>
 
 
