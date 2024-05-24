@@ -1,6 +1,6 @@
 
 <p align="center">
-   <img src="https://raw.githubusercontent.com/explomind1/AOI_ProlificSurveyAlgoMoralLearning1/d_TJeFaR7L.svg" />
+   <img src="https://github.com/explomind1/AOI_ProlificSurveyAlgoMoralLearning1/blob/main/d_TJeFaR7L.svg?raw=true" />
 </p>
 
 
