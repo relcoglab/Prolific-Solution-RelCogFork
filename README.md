@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/explomind1/Prolific-Survey-Distribution-Solution/AOI_ProlificSurveyAlgoMoralLearning1/d_TJeFaR7L.svg" />
+   <img src="https://github.com/explomind1/AOI_ProlificSurveyAlgoMoralLearning1/d_TJeFaR7L.svg" />
 </p>
 
 # Prolific Survey Distribution Solution
