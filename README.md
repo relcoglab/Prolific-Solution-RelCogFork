@@ -34,7 +34,7 @@ This system integrates several technologies:
 
 ### 2. Deploying AWS Lambda
 - Create a new Lambda function in your AWS Console - Python 3.10 runtime, x86-64 architecture.
-- On your local machine, open the `dockerdeps` folder and follow the instrunctions in `dockerinstruct.txt`. 
+- On your local machine, open the `dockerdeps` folder and follow the instructions in `dockerinstruct.txt`. 
 - Zip the resulting `extracted-deps` folder and upload it as the source code to the Lambda function
 
 ### 3. Configuring API Gateway
@@ -43,7 +43,8 @@ This system integrates several technologies:
 - The API should de-facto be on a stage called 'default'; for safety, you will need to 'Deploy' the API on the default stage everytime before making some change and testing.
 
 ### 4. Firestore Configuration
-- In your Firestore database, create a collection called `MoralCompositionTestRun`. In that, create a document called `ManagementData`. In that create two fields: `participants` and `surveys`, both are maps. You can refer to `db_fetch.py` to see how they are structured. Ideally, simply running `db_fetch.py` on your local machine should initialize the firestore as needed, but that isn't tested (yet).
+- In your Firestore database, create a collection called `MoralCompositionTestRun`. In that, create a document called `ManagementData`. 
+- On your local machine, run `python db_fetch.py` inside the `dockerdeps` folder, it should initialize the database properly (check that `config.py` contains the correct credentials to refer to the database on firestore!)
 - NOTE: This code is set up to work with these firestore names. Simply replace all names with whatever your names are in `lambda_function.py` and `db_fetch.py` for it to work with your firestore database!
 
 ### 5. Testing
