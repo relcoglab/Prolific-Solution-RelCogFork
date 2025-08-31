@@ -12,8 +12,9 @@ db = firestore.client()
 
 # List of surveys and participants
 surveys = [
-    "https://qualtricsxmhxsm8yb3m.qualtrics.com/jfe/form/SV_4OQou7COBK2WPs2",
-    "https://qualtricsxmhxsm8yb3m.qualtrics.com/jfe/form/SV_6KETqTdatNVMQPc"
+    # "https://qualtricsxmhxsm8yb3m.qualtrics.com/jfe/form/SV_4OQou7COBK2WPs2",
+    # "https://qualtricsxmhxsm8yb3m.qualtrics.com/jfe/form/SV_6KETqTdatNVMQPc"
+    "https://qualtricsxmhxsm8yb3m.pdx1.qualtrics.com/jfe/form/SV_eEFjLFIsG5SEGoe"
     # Add other survey URLs here
 ]
 participants = [
@@ -28,7 +29,7 @@ survey_dict = {url.split('/')[-1]: {'url': url, 'count': 0} for url in surveys}
 participant_dict = {pid: [] for pid in participants}
 
 # Populate the Firestore document
-management_data_ref = db.collection('AOIProlificManagement').document('ManagementData')
+management_data_ref = db.collection('MoralCompositionTestRun').document('ManagementData')
 management_data_ref.set({
     'surveys': survey_dict,
     'participants': participant_dict

@@ -1,5 +1,35 @@
+import sys
+import os
 
+print("Python path:", sys.path)
+print("Contents of /var/task/:", os.listdir('/var/task/'))
+# print("Contents of /var/task/python/:", os.listdir('/var/task/python/'))
 
+try:
+    import firebase_admin
+    print("✅ firebase_admin imported successfully")
+except Exception as e:
+    print("❌ firebase_admin failed:", str(e))
+
+try:
+    from firebase_admin import credentials
+    print("✅ credentials imported successfully")
+except Exception as e:
+    print("❌ credentials failed:", str(e))
+
+try:
+    from firebase_admin import firestore
+    print("✅ firestore imported successfully")
+except Exception as e:
+    print("❌ firestore failed:", str(e))
+    print("Exception type:", type(e))
+
+try:
+    import google.cloud.firestore
+    print("✅ google.cloud.firestore imported directly")
+except Exception as e:
+    print("❌ google.cloud.firestore failed:", str(e))
+    print("Exception type:", type(e))
 
 import json
 import random
@@ -23,7 +53,7 @@ def lambda_handler(event, context):
         prolific_id = event['queryStringParameters']['PROLIFIC_PID']
 
         # Reference to the Firestore management document
-        management_ref = db.collection('AOIProlificManagement').document('ManagementData')
+        management_ref = db.collection('MoralCompositionTestRun').document('ManagementData')
         management_data = management_ref.get().to_dict()
 
         # Get participant and survey data

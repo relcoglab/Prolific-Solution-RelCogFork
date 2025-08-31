@@ -1,0 +1,18 @@
+# Build the Docker image
+docker build -t lambda-deps .
+
+# Create a temporary container
+docker create --name temp lambda-deps
+
+# Copy the installed packages out of the container
+docker cp temp:/var/task ./extracted-deps
+
+# Clean up the temporary container
+docker rm temp
+
+# Copy lambda function source code files
+cp lambda_function.py extracted-deps/
+cp db_fetch.py extracted-deps/
+
+# Inside extracted-deps/, create a config.py and populate it with:
+FIREBASE_CREDENTIALS = { ... your credentials json from firestore project ... }
