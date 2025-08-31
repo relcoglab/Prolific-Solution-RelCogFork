@@ -39,7 +39,7 @@ This system integrates several technologies:
 
 ### 3. Configuring API Gateway
 - Set up a new API Gateway (REST) that triggers the Lambda function.
-- There should be a 'ANY' method set up by default in Resources in the API console. Add `PROLIFIC_ID` as a URL query string parameter, configure it in both Method Request and Integration Request.
+- There should be a 'ANY' method set up by default in Resources in the API console. Add `PROLIFIC_ID` as a URL query string parameter, configure it in both Method Request and Integration Request. In Method Request, simply add `PROLIFIC_PID` as a new parameter. In Integration Request, add `PROLIFIC_PID` and enter `method.request.querystring.PROLIFIC_PID` in the "Mapped from:" box.
 - The API should de-facto be on a stage called 'default'; for safety, you will need to 'Deploy' the API on the default stage everytime before making some change and testing.
 
 ### 4. Firestore Configuration
