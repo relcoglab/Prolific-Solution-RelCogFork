@@ -1,0 +1,23 @@
+{
+  "resource": "/prolificSolution",
+  "path": "/prolificSolution", 
+  "httpMethod": "GET",
+  "headers": {},
+  "multiValueHeaders": {},
+  "queryStringParameters": {
+    "PROLIFIC_PID": "test123"
+  },
+  "multiValueQueryStringParameters": {
+    "PROLIFIC_PID": ["test123"]
+  },
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "httpMethod": "GET",
+    "requestId": "test-request-id",
+    "path": "/prolificSolution",
+    "stage": "test"
+  },
+  "body": null,
+  "isBase64Encoded": false
+}
